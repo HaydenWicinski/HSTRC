@@ -48,7 +48,7 @@ public class HandHandler {
 		for(boolean[] data : allData)
 		{
 			String stringData = boolArrayToString(data);
-			if(dataCountMap.containsKey(stringData))//dataCountMap.containsKey(data))
+			if(dataCountMap.containsKey(stringData))
 			{
 				log("already found data");
 				log("size: " + dataCountMap.size());
@@ -72,7 +72,6 @@ public class HandHandler {
 		Set<Entry<String, Integer>> entrySet = dataCountMap.entrySet();
 		for(Entry<String, Integer> entry : entrySet)
 		{
-<<<<<<< HEAD
 			//log("test");
 			if(entry.getValue() >= frequency)
 			{
@@ -80,19 +79,10 @@ public class HandHandler {
 				
 				topElement = entry.getKey();
 				log("hand seen is: " + topElement);
-=======
-			log("test");
-			if(entry.getValue() >= frequency)
-			{
-				log("found new top elem");
-				
-				topElement = entry.getKey();
-				log("topElement is: " + topElement);
->>>>>>> f51c82cad0fc0f713bc461d7c533cad74f1036a5
 				frequency = entry.getValue();
 			}
 		}
-		//top element should now contain the most frequent hand signal given in 100 tries.ust finished 
+		//top element should now contain the most frequent hand signal given in x tries.
 		retval = topElement;
 		log("PRINTING THE RETVAL: ");
 		log("retval:" + retval);
@@ -120,7 +110,6 @@ public class HandHandler {
 		{
 			if(i > 4)
 			{
-				log("WOAH HOWd YOU GET HERE MR 6 FINGERS");
 				break;
 			}
 			if(c == 't')
@@ -199,7 +188,7 @@ public class HandHandler {
 		boolean retval = false;
 		for(boolean[] b : map.keySet())
 		{
-			log("printing the dam array");
+			
 			printBArray(b);
 			if(Arrays.equals(b,keyCompare))
 			{
